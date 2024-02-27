@@ -4,14 +4,14 @@ import Banner from './Banner';
 import Team from './Team';
 import HappyCustomer from './HappyCustomer';
 import SectionBanner from '../../Shared/SectionBanner';
-import bannerImg from '../../assets/about/banner2.jpg'
+// import bannerImg from '../../assets/about/banner2.jpg'
 import Banner3 from './Banner3';
 
 const About = () => {
     return (
         <div className='mt-20'>
 
-            <SectionBanner pageName={'About us'} path={'about'} image={bannerImg}></SectionBanner>
+            <SectionBanner pageName={'About us'} path={'about'}  ></SectionBanner>
           
             
             <WhyBest></WhyBest>

@@ -1,7 +1,7 @@
 import React from 'react';
-// import img1 from '../assets/about/banner2.jpg'
+import img1 from '../assets/about/banner2.jpg'
 import { FaHome } from "react-icons/fa";
-const SectionBanner = ({ pageName, path,image }) => {
+const SectionBanner = ({ pageName, path }) => {
 
 
     return (
@@ -11,7 +11,7 @@ const SectionBanner = ({ pageName, path,image }) => {
                 {/* Background image */}
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${image})` }}
+                    style={{ backgroundImage: `url(${img1})` }}
                 />
 
                 {/* Black shadow overlay */}
@@ -19,7 +19,7 @@ const SectionBanner = ({ pageName, path,image }) => {
 
                 {/* Content */}
                 <div className="absolute inset-0 flex items-center justify-center flex-col text-white p-12">
-                    <p className='font-bold text-3xl md:text-4xl my-3 text-center'>  {pageName} </p>
+                    <p className='font-bold text-3xl md:text-4xl my-3 text-center capitalize'>  {pageName} </p>
                     <div className='flex gap-2 md:text-xl md:mt-4'>
                     <FaHome className='mt-1 ' />
                         <p className='font-bold  '>Home </p>
