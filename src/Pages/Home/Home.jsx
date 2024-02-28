@@ -5,6 +5,8 @@ import Banner3 from '../About/Banner3';
 import WhyBest from '../About/WhyBest';
 import Features from './Features';
 import BannerHome from './BannerHome';
+import BannerCompany from './BannerCompany';
+import SpecialMenu from './SpecialMenu';
 
 const Home = () => {
     return (
@@ -14,10 +16,13 @@ const Home = () => {
             <Features></Features>
             <BannerHome></BannerHome>
             <WhyBest></WhyBest>
+            <SpecialMenu></SpecialMenu>
 
             <Banner3></Banner3>
         
             <Team></Team>
+
+            <BannerCompany></BannerCompany>
             <HappyCustomer></HappyCustomer>
             
 

@@ -2,6 +2,7 @@ import React from "react";
 import image1 from "../../assets/about/exparience.png";
 import service from "../../assets/about/service.png";
 import booking from "../../assets/about/booking.png";
+import { Link } from "react-router-dom";
 
 const WhyBest = () => {
     return (
@@ -47,8 +48,8 @@ const WhyBest = () => {
                         </div>
                     </div>
 
-                    <button className="font-bold text-white bg-red-600 px-8 py-4 rounded-md transition-all duration-300 my-8  hover:bg-green-950">About Us</button>
-
+                   <Link to='/about'>  <button className="font-bold text-white bg-red-600 px-8 py-4 rounded-md transition-all duration-300 my-8  hover:bg-green-950">About Us</button>
+</Link>
                 </div>
             </div>
 
