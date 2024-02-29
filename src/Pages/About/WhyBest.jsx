@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const WhyBest = () => {
     return (
-        <div>
+        <div className="mt-24">
 
             <div className="flex items-center place-content-center justify-center gap-8 md:gap-16 flex-wrap px-4 ">
                 <div>

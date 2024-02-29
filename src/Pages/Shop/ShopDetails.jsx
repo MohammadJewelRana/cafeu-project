@@ -3,7 +3,7 @@ import SectionBanner from '../../Shared/SectionBanner';
 import img1 from '../../assets/menu/1.png'
 import { FaStar } from 'react-icons/fa';
 import LatestFood from './LatestFood';
-import Tab from './Tab';
+import TabDetails from './TabDetails';
 
 const ShopDetails = () => {
 
@@ -96,7 +96,7 @@ const ShopDetails = () => {
                 </div>
             </div>
 
-<Tab></Tab>
+<TabDetails></TabDetails>
 <LatestFood></LatestFood>
 
 

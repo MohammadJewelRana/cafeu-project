@@ -3,7 +3,7 @@ import banner from '../../assets/about/banner2.jpg'
 
 const BannerHome = () => {
     return (
-        <div className='my-24'>
+        <div className='mt-24'>
 
 
 <div className="relative bg-cover bg-center h-96 md:h-64 flex items-center justify-center">

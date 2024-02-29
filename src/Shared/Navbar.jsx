@@ -37,6 +37,7 @@ const Navbar = () => {
        
         { link: "About", path: "/about" },
         { link: "Contact", path: "/contact" },
+        { link: "Cart", path: "/cart" },
  
       
     ];

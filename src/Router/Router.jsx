@@ -7,6 +7,7 @@ import Contact from '../Pages/Contact/Contact.jsx';
 import Menu from '../Pages/Menu/Menu.jsx';
 import Shop from '../Pages/Shop/Shop.jsx';
 import ShopDetails from '../Pages/Shop/ShopDetails.jsx';
+import Cart from '../Pages/Cart/Cart.jsx';
  
 
 
@@ -22,6 +23,7 @@ import ShopDetails from '../Pages/Shop/ShopDetails.jsx';
             { path:'/menu', element:  <Menu></Menu>    },
             { path:'/shop', element:  <Shop></Shop>   },
             { path:'/shopDetails', element:  <ShopDetails></ShopDetails>   },
+            { path:'/cart', element: <Cart></Cart>    },
         ]
     }
  ])
