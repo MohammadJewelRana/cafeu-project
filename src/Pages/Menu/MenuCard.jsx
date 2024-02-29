@@ -1,81 +1,68 @@
-import React from 'react';
-import MenuTItle from './MenuTItle';
-import img1 from '../../assets/menu/1.png'
+import React from "react";
+import MenuTItle from "./MenuTItle";
+import img1 from "../../assets/menu/1.png";
+import { Link } from "react-router-dom";
 
 const MenuCard = ({ menuData, heading, backgroundColor }) => {
+  console.log(menuData, backgroundColor);
+  const [price, name, detailsDescription] = menuData;
 
+  return (
+    <div className={`bg-${backgroundColor} p-4 mb-12`}>
+      <MenuTItle heading={heading}></MenuTItle>
 
-    console.log(menuData, backgroundColor);
- 
-
-    return (
-        <div className={`bg-${backgroundColor} p-4 `}>
- 
-
-            {/* ///////////////////////////////////////////////////////////////////// 
-
-            {/* ///////////////////////////////////////////////////////////////////////////// */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <MenuTItle heading={heading} ></MenuTItle>
-
-            {/* <div className='flex flex-wrap md:flex-nowrap items-center justify-center gap-4 '> */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 place-items-center md:mx-12 mb-12'>
-    {menuData.map((item, index) => (
-        <div key={index} className='w-full md:w-auto'>
-            <div className='flex gap-8 items-center p-2 md:p-4 border mx-12 shadow-md rounded-md justify-start'>
-                <div>
-                    <img className='h-28 w-32 rounded' src={img1} alt="" />
+      <div className="grid grid-cols-1 gap-4  md:flex md:items-center md:justify-center flex-wrap  md:gap-12">
+        {menuData.map((item) => (
+          <   >
+            
+          <div className="flex items-center gap-8 border p-4 md:w-2/5 rounded-md shadow-md md:h-48 lg:h-44  cursor-pointer hover:scale-105 duration-300 transition-transform">
+         
+              <img src={img1} className="h-20 w-16 rounded-full   " alt="" />
+              <div className="w-full ">
+                <div className="flex text-xl lg:text-2xl md:text-[16px] font-semibold items-center justify-between mb-2">
+                  <p className=" "> {item.name}</p>
+                  <p>${item.price}</p>
                 </div>
                 <div>
-                    <div className='flex justify-between items-center'>
-                        <h1 className='md:text-xl font-bold'>{item.name}</h1>
-                        <h1 className='md:text-xl font-bold'>${item.price}</h1>
-                    </div>
-                    <p className='text-gray-600 text-[10px] md:text-[12px] py-1'>{item.detailsDescription}</p>
-                    <button className='outline-none border-b-2 border-b-blue-500 font-bold text-[10px] md:text-[12px] text-blue-600'>ADD TO CART</button>
+                  <p className="text-gray-500  text-wrap">
+                    {" "}
+                    {item.detailsDescription.length > 80 ? (
+                <div className="">
+                    {item.detailsDescription.slice(0, 80)} <span className="text-blue-600">... See more</span>
                 </div>
+            ) : item.detailsDescription.length > 100 ? (
+                <>
+                    {item.detailsDescription.slice(0, 100)}
+                </>
+            ) : (
+                <>
+                    {item.detailsDescription}
+                </>
+            )}
+                    
+                  </p>
+
+                  <div className="flex items-center  gap-8">
+                  <button className="outline-none border-b-2 border-b-blue-500 font-bold mt-4 text-[10px] md:text-[12px] text-blue-600 hover:text-red-600 hover:border-b-red-600">
+                    ADD TO CART
+                  </button>
+
+                 <Link to='/shopDetails'>   <button className="outline-none border-b-2 border-b-blue-500 font-bold mt-4 text-[10px] md:text-[12px] text-blue-600 hover:text-red-600 hover:border-b-red-600">
+                    DETAILS
+                  </button></Link>
+                  </div>
+                </div>
+              </div>
+ 
+
             </div>
-        </div>
-    ))}
-</div>
-
-
-
-
-            {/* <div className='grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center mx-12'>
-                <div className='flex gap-8 items-center p-2 md:p-4 border mx-2 shadow-md rounded-md '>
-                    <div >
-                        <img className=' h-28 w-32 rounded' src={img1} alt="" />
-                    </div>
-                    <div className='  '>
-                        <div className='flex justify-between items-center'>
-                            <h1 className='md:text-xl font-bold'> MARGHERITA PIZZA </h1>
-                            <h1 className='md:text-xl font-bold'>$ 12.00 </h1>
-                        </div>
-                        <p className='text-gray-600 py-1'>A classic Margherita pizza topped with ripe tomatoes and fresh mozzarella </p>
-                        <button className='  outline-none border-b-2 border-b-blue-500 font-bold text-[10px] md:text-[12px] text-blue-600'>ADD TO CART</button>
-                    </div>
-                </div>
-            </div> */}
-
-
-        </div>
-    );
+           
+         
+          </>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default MenuCard;

@@ -18,7 +18,7 @@ const ShopDetails = () => {
     };
 
     return (
-        <div className='mt-32 mb-12  '>
+        <div className='mt-24 mb-12  '>
             <SectionBanner pageName={'Shop Details'} path={'shop details'}  ></SectionBanner>
 
 
