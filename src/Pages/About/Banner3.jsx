@@ -22,7 +22,7 @@ const Banner3 = () => {
                 <div className="absolute inset-0 bg-black opacity-50 " />
 
                 {/* Content */}
-                <div className="absolute inset-0 flex   justify-center flex-col text-white p-12  md:ml-24">
+                <div className="absolute inset-0 flex   justify-center flex-col text-white p-12  md:ml-24 p-8">
 
                     <p className='text-red-600 text-2xl'>
                         <FaYoutube></FaYoutube>
@@ -37,7 +37,7 @@ const Banner3 = () => {
             </div>  
 
  
-            <div className='border bg-green-200 shadow-xl w-[400px] p-4 text-center mx-auto mt-4 relative  md:-mt-14   lg:-mt-32md:float-end md:mr-96  rounded-md'>
+            {/* <div className='border bg-green-200 shadow-xl w-[400px] p-4 text-center mx-auto mt-4 relative  md:-mt-14   lg:-mt-32md:float-end md:mr-96  rounded-md'>
                 <div>
                     <p className='text-red-600 italic my-2'>Opening Times</p>
                     <h1 className='text-2xl font-bold capitalize' >Check Availability</h1>
@@ -72,7 +72,7 @@ const Banner3 = () => {
                     <p> +993240-765238</p>
                 </div>
 
-            </div>   
+            </div>    */}
 
 
 

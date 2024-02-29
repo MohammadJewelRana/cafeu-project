@@ -7,12 +7,14 @@ import Features from './Features';
 import BannerHome from './BannerHome';
 import BannerCompany from './BannerCompany';
 import SpecialMenu from './SpecialMenu';
+ 
+import HomeCarousel from './HomeCarousel';
 
 const Home = () => {
     return (
-        <div className='mt-32'>
+        <div className='mt-24'>
 
-
+ <HomeCarousel></HomeCarousel>
             <Features></Features>
             <BannerHome></BannerHome>
             <WhyBest></WhyBest>
