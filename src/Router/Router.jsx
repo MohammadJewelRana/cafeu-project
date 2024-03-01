@@ -10,6 +10,11 @@ import ShopDetails from '../Pages/Shop/ShopDetails.jsx';
 import Cart from '../Pages/Cart/Cart.jsx';
 import Wishlist from '../Pages/Cart/Wishlist.jsx';
 import Checkout from '../Pages/Cart/Checkout.jsx';
+import Login from '../Pages/Login_Reg/Login.jsx';
+import Registration from '../Pages/Login_Reg/Registration.jsx';
+import AdminLayout from '../Admin/LayoutAdmin/AdminLayout.jsx';
+import AdminHome from '../Admin/AdminHome/AdminHome.jsx';
+import AdminDashboard from '../Admin/AdminDashboard/AdminDashboard.jsx';
  
 
 
@@ -28,8 +33,33 @@ import Checkout from '../Pages/Cart/Checkout.jsx';
             { path:'/cart', element: <Cart></Cart>    },
             { path:'/wishList', element: <Wishlist></Wishlist>   },
             { path:'/checkout', element: <Checkout></Checkout> },
+            { path:'/login', element: <Login></Login> },
+            { path:'/registration', element:  <Registration></Registration> },
+
+        ]
+    },
+
+    {
+        path:'/',
+        element:<AdminLayout></AdminLayout>,
+        children:[
+            {
+                path:'/admin',
+                element:<AdminHome></AdminHome>,
+                children:[
+                    {
+                        path:'/admin',
+                        element:<AdminDashboard></AdminDashboard>
+                    }
+                ]
+            }
         ]
     }
- ])
 
- export default router;
+
+
+
+
+])
+
+export default router;

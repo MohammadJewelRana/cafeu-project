@@ -27,7 +27,7 @@ const HomeCarousel = () => {
       
           
 
-                    <div>
+                    <div className='max-w-7xl mx-auto'>
                         <Swiper
                             slidesPerView={1}
                             spaceBetween={30}

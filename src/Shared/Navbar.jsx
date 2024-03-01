@@ -1,13 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 // import img1 from "../assets/logo/s-logo-design-template-graphic-branding-element-free-vector.jpg";
 // import { Link } from "react-router-dom";
 import { FaArrowRight, FaBars, FaCross, FaTimesCircle } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
 import mainLogo from '../assets/logo/logo.png'
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Navbar = () => {
+
+
+    const {user}=useContext(AuthContext);
+    console.log(user);
+  
+
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
 
@@ -39,9 +47,14 @@ const Navbar = () => {
         { link: "Contact", path: "/contact" },
         { link: "Cart", path: "/cart" },
         { link: "WishList", path: "/wishList" },
+        { link: "Dashboard", path: "/admin" },
  
       
     ];
+
+
+
+
  
     return (
         <div className="bg-blue-600 ">
@@ -74,9 +87,12 @@ const Navbar = () => {
 
                     {/* button  for large device*/}
                     <div className="hidden lg:block ">
-                        <button className="bg-green-500 text-white py-1 px-2  rounded text-[18px] flex justify-center content-center items-center transition-all duration-300 hover:bg-green-600"> Register Now
+                        {/* <img src={user?. } alt="" /> */}
+                        <p>{user?.email}</p>
+                        
+                       <Link to='/login'>  <button className="bg-green-500 text-white py-1 px-2  rounded text-[18px] flex justify-center content-center items-center transition-all duration-300 hover:bg-green-600"> Register Now
                             <FaArrowRight className="  ml-2 text-white"> </FaArrowRight>
-                        </button>
+                        </button></Link>
                     </div>
 
                     {/* small device  */}
